@@ -81,13 +81,26 @@ h6 {
 }
 
 :root {
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
     --white: #FFF;
     --transparent-black: #00000084;
+    --light-gray: #f4f4f4;
+    --medium-gray: #AAA;
+    --dark-gray: #444;
+    --green: #596D48;
 }
 
+body {
+    display:flex;
+    flex: 0 0 auto;
+}
+
+h1 {
+    font-size:24px;
+    margin-bottom:1.5rem;
+}
 .sidebar {
-    width:40vw;
+    min-width:40vw;
     min-height: 100vh;
     background-image: url(asset/nature-background.jpg);
     background-size:cover;
@@ -118,5 +131,63 @@ h6 {
 
 .sidebar h1 {
     font-size:96px;
+    margin:0;
 }
 
+.main {
+    background-color: var(--light-gray);
+    padding:6rem 0;
+}
+
+.caption-group {
+    margin:0 2rem 3rem 2rem;
+}
+
+.signup-form {
+    background-color: var(--white);
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 5px 10px var(--medium-gray);
+}
+
+.signup-form label {
+    display:block;
+    color:var(--dark-gray);
+    font-weight: bold;
+    font-size:.8rem;
+    margin-bottom:.2rem;
+    letter-spacing: 1.5px;
+}
+
+.signup-form input {
+    width:15rem;
+}
+
+.signup-form .form-row {
+    display:flex;
+    margin-bottom:1rem;
+    gap:5rem;
+}
+
+button[type="submit"] {
+    border:none ;
+    background-color: var(--green);
+    color:var(--white);
+    padding:.5rem 2rem;
+    border-radius: 7px;
+    box-shadow: 0 5px 10px var(--medium-gray);
+    font-weight: bold;
+    margin: 2rem 0 0 2rem;
+    cursor:pointer;
+}
+
+.login-msg {
+    margin: 2rem 0 0 2rem;
+    font-weight: bold;
+}
+
+.login-msg a {
+    color:#596D48;
+    text-decoration: none;
+}
