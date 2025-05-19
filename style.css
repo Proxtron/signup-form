@@ -88,6 +88,8 @@ h6 {
     --medium-gray: #AAA;
     --dark-gray: #444;
     --green: #596D48;
+    --blue: #0099ff;
+    --red: #ff2a2a;
 }
 
 body {
@@ -162,6 +164,9 @@ h1 {
 
 .signup-form input {
     width:15rem;
+    padding: .15rem .5rem;
+    border: 1px solid #E5E7EB;
+    border-radius: 5px;
 }
 
 .signup-form .form-row {
@@ -190,4 +195,13 @@ button[type="submit"] {
 .login-msg a {
     color:#596D48;
     text-decoration: none;
+}
+
+.signup-form input:focus {
+    border: 1px solid var(--blue);
+    box-shadow: 5px 3px 10px var(--medium-gray);
+}
+
+.signup-form input:invalid {
+    border: 1px solid var(--red);
 }
